@@ -14,7 +14,7 @@ const Login = () => {
     }
     const loginData = { email, password };
     try {
-      const url = "http://localhost:8080/api/vendors/login";
+      const url = "https://matexbackend.vercel.app/api/vendors/login";
       const response = await fetch(url, {
         method: "POST",
         headers: {

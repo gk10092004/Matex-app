@@ -254,7 +254,7 @@ const VendorMaterial = () => {
       loader.current.style.display = "flex";
       setLoading(true);
 
-      const url = "http://localhost:8080/api/vendors/history";
+      const url = "https://matexbackend.vercel.app/api/vendors/history";
       const response = await fetch(url, {
         method: "POST",
 

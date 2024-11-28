@@ -46,7 +46,7 @@ const UserHome = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const url = "http://localhost:8080/api/vendors/all-vendor";
+        const url = "https://matexbackend.vercel.app/api/vendors/all-vendor";
         const response = await fetch(url);
         if (!response.ok) throw new Error("server not found");
         const data = await response.json();

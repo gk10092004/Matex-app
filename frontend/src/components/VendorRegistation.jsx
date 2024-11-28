@@ -46,7 +46,7 @@ const Registation = () => {
       zipCode,
     };
     try {
-      const url = "http://localhost:8080/api/vendors/signup";
+      const url = "https://matexbackend.vercel.app/api/vendors/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {

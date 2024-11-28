@@ -31,7 +31,7 @@ const UserHome = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/vendors/allMaterial"
+          "https://matexbackend.vercel.app/api/vendors/allMaterial"
         );
         if (!response.ok) throw new Error("Network response was not ok");
 
@@ -138,7 +138,7 @@ const UserHome = () => {
     const fetchProcesData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/vendors/allProcess"
+          "https://matexbackend.vercel.app/api/vendors/allProcess"
         );
         if (!response.ok) throw new Error("Network response was not ok");
 
@@ -250,7 +250,7 @@ const UserHome = () => {
     let updatedFilterArray = FilterExtra;
 
     if (!processFilter.length) {
-      handleError("Select filter");
+      console.log("Select filter");
     } else {
       updatedFilterArray = FilterExtra.filter((material) => {
         return processFilter.some((process) =>

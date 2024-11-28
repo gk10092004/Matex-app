@@ -21,7 +21,7 @@ const PassForget = () => {
     if (!email) handleError("Enter your email");
     try {
       const response = await fetch(
-        "http://localhost:8080/api/vendors/all-vendor"
+        "https://matexbackend.vercel.app/api/vendors/all-vendor"
       );
       if (!response.ok) {
         throw handleError("Failed to fetch users");
@@ -34,7 +34,7 @@ const PassForget = () => {
       const owner = user._id;
       const otpData = { email, owner };
 
-      const url = "http://localhost:8080/api/vendors/send-otp";
+      const url = "https://matexbackend.vercel.app/api/vendors/send-otp";
       const response2 = await fetch(url, {
         method: "POST",
         headers: {
@@ -53,7 +53,7 @@ const PassForget = () => {
         ReadOnly.current.setAttribute("readonly", "readonly");
         ReadOnly.current.style.color = "#5a5a5a";
         const otpResponse = await fetch(
-          "http://localhost:8080/api/vendors/all-vendor"
+          "https://matexbackend.vercel.app/api/vendors/all-vendor"
         );
         const users = await otpResponse.json();
         const otpUser = users.find((user) => user.email === email);
@@ -83,7 +83,7 @@ const PassForget = () => {
     if (password == confirmPass) {
       try {
         const reset = { email, password };
-        const url = "http://localhost:8080/api/vendors/password-reset";
+        const url = "https://matexbackend.vercel.app/api/vendors/password-reset";
         const response = await fetch(url, {
           method: "PUT",
           headers: {

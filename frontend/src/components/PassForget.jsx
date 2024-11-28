@@ -19,7 +19,7 @@ const PassForget = () => {
   const SendOtp = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/api/users/all-user");
+      const response = await fetch("https://matexbackend.vercel.app/api/users/all-user");
       if (!response.ok) {
         throw new Error("Failed to fetch users");
       }
@@ -31,7 +31,7 @@ const PassForget = () => {
       const owner = user._id;
       const otpData = { email, owner };
       //now send email and userId
-      const url = "http://localhost:8080/api/users/send-otp";
+      const url = "https://matexbackend.vercel.app/api/users/send-otp";
       const response2 = await fetch(url, {
         method: "POST",
         headers: {
@@ -50,7 +50,7 @@ const PassForget = () => {
         ReadOnly.current.setAttribute("readonly", "readonly");
         ReadOnly.current.style.color = "#5a5a5a";
         const otpResponse = await fetch(
-          "http://localhost:8080/api/users/all-user"
+          "https://matexbackend.vercel.app/api/users/all-user"
         );
         const users = await otpResponse.json();
         const otpUser = users.find((user) => user.email === email);
@@ -79,7 +79,7 @@ const PassForget = () => {
     if (password == confirmPass) {
       try {
         const reset = { email, password };
-        const url = "http://localhost:8080/api/users/password-reset";
+        const url = "https://matexbackend.vercel.app/api/users/password-reset";
         const response = await fetch(url, {
           method: "PUT",
           headers: {

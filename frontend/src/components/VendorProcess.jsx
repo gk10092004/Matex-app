@@ -80,7 +80,7 @@ const VendorProcess = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/vendors/allMaterial"
+          "https://matexbackend.vercel.app/api/vendors/allMaterial"
         );
         const data = await response.json();
 
@@ -101,7 +101,7 @@ const VendorProcess = () => {
     const fetchMaterials = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/vendors/allMaterial"
+          "https://matexbackend.vercel.app/api/vendors/allMaterial"
         );
         const data = await response.json();
 
@@ -271,7 +271,7 @@ const VendorProcess = () => {
     try {
       loader.current.style.display = "flex";
       setLoading(true);
-      const url = "http://localhost:8080/api/vendors/process-history";
+      const url = "https://matexbackend.vercel.app/api/vendors/process-history";
       const response = await fetch(url, {
         method: "POST",
         body: formData,

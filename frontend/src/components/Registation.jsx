@@ -19,7 +19,7 @@ const Registation = () => {
     }
     const sigupData = { username, email, password, phoneNumber, jobTitle };
     try {
-      const url = "http://localhost:8080/api/users/signup";
+      const url = "https://matexbackend.vercel.app/api/users/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {

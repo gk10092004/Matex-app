@@ -14,7 +14,7 @@ const MaterialDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:8080/api/vendors/allMaterial";
+        const url = "https://matexbackend.vercel.app/api/vendors/allMaterial";
         const response = await fetch(url);
         if (!response.ok) throw new Error("netork issue");
         const data = await response.json();
