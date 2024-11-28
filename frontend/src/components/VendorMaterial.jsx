@@ -165,11 +165,6 @@ const VendorMaterial = () => {
     if (!datasheet_pdf || !material_photo) {
       return handleError("Upload datasheet and photo");
     }
-
-    formData.append("owner", ownerId);
-    const demo = true;
-    if(demo) return console.log("demo",demo,matImage);
-    
     //properties check
     const isObjectNonEmpty = (obj) => Object.keys(obj).length > 0;
     let emptyCount = 0;
@@ -243,9 +238,8 @@ const VendorMaterial = () => {
     );
 
     // Add owner ID if needed
-    
-    // else return console.log("something is error here")
-    
+    formData.append("owner", ownerId);
+
     try {
       const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
       if (
@@ -256,51 +250,49 @@ const VendorMaterial = () => {
           `File size should not exceed 50 MB. ${material_photo.size}`
         );
       }
-      
-      // loader.current.style.display = "flex";
-      // setLoading(true);
-      
-      
 
-      // const url = "https://matexbackend.vercel.app/api/vendors/history";
-      // const response = await fetch(url, {
-      //   method: "POST",
+      loader.current.style.display = "flex";
+      setLoading(true);
 
-      //   body: formData,
-      // });
-      // const result = await response.json();
+      const url = "https://matexbackend.vercel.app/api/vendors/history";
+      const response = await fetch(url, {
+        method: "POST",
 
-      // const { success, message, error } = result;
-      // if (success) {
-      //   handleSuccess(message);
-      //   setTimeout(() => {
-      //     loader.current.style.display = "none";
-      //     setLoading(false);
-      //   }, 1000);
+        body: formData,
+      });
+      const result = await response.json();
 
-      //   setMN("");
-      //   setMC("");
-      //   setAD("");
-      //   setMP(null);
-      //   setDP(null);
-      //   setSQ("");
-      //   dataName.current.style.display = "none";
-      //   showPhoto.current.style.display = "none";
-      //   formRef.current.reset();
-      // } else if (error) {
-      //   const details = error?.details[0].message;
-      //   setTimeout(() => {
-      //     loader.current.style.display = "none";
-      //     setLoading(false);
-      //   }, 1000);
-      //   handleError(details);
-      // } else if (!success) {
-      //   handleError(message);
-      //   setTimeout(() => {
-      //     loader.current.style.display = "none";
-      //     setLoading(false);
-      //   }, 1000);
-      // }
+      const { success, message, error } = result;
+      if (success) {
+        handleSuccess(message);
+        setTimeout(() => {
+          loader.current.style.display = "none";
+          setLoading(false);
+        }, 1000);
+
+        setMN("");
+        setMC("");
+        setAD("");
+        setMP(null);
+        setDP(null);
+        setSQ("");
+        dataName.current.style.display = "none";
+        showPhoto.current.style.display = "none";
+        formRef.current.reset();
+      } else if (error) {
+        const details = error?.details[0].message;
+        setTimeout(() => {
+          loader.current.style.display = "none";
+          setLoading(false);
+        }, 1000);
+        handleError(details);
+      } else if (!success) {
+        handleError(message);
+        setTimeout(() => {
+          loader.current.style.display = "none";
+          setLoading(false);
+        }, 1000);
+      }
     } catch (error) {
       handleError(error);
       setTimeout(() => {
