@@ -250,11 +250,12 @@ const VendorMaterial = () => {
           `File size should not exceed 50 MB. ${material_photo.size}`
         );
       }
-
-      loader.current.style.display = "flex";
-      setLoading(true);
+      
+      // loader.current.style.display = "flex";
+      // setLoading(true);
       if(ownerId) return console.log(ownerId,matImage);
       else return console.log("something is error here")
+      
 
       // const url = "https://matexbackend.vercel.app/api/vendors/history";
       // const response = await fetch(url, {
