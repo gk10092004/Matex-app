@@ -165,6 +165,11 @@ const VendorMaterial = () => {
     if (!datasheet_pdf || !material_photo) {
       return handleError("Upload datasheet and photo");
     }
+
+    formData.append("owner", ownerId);
+    const demo = true;
+    if(demo) return console.log("demo",demo,matImage);
+    
     //properties check
     const isObjectNonEmpty = (obj) => Object.keys(obj).length > 0;
     let emptyCount = 0;
@@ -238,9 +243,6 @@ const VendorMaterial = () => {
     );
 
     // Add owner ID if needed
-    formData.append("owner", ownerId);
-    const demo = true;
-    if(demo) return console.log("demo",demo,matImage);
     
     // else return console.log("something is error here")
     
