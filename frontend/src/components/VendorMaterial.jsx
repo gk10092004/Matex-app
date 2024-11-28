@@ -255,45 +255,45 @@ const VendorMaterial = () => {
       setLoading(true);
       if(ownerId) return console.log(ownerId,matImage)
 
-      const url = "https://matexbackend.vercel.app/api/vendors/history";
-      const response = await fetch(url, {
-        method: "POST",
+      // const url = "https://matexbackend.vercel.app/api/vendors/history";
+      // const response = await fetch(url, {
+      //   method: "POST",
 
-        body: formData,
-      });
-      const result = await response.json();
+      //   body: formData,
+      // });
+      // const result = await response.json();
 
-      const { success, message, error } = result;
-      if (success) {
-        handleSuccess(message);
-        setTimeout(() => {
-          loader.current.style.display = "none";
-          setLoading(false);
-        }, 1000);
+      // const { success, message, error } = result;
+      // if (success) {
+      //   handleSuccess(message);
+      //   setTimeout(() => {
+      //     loader.current.style.display = "none";
+      //     setLoading(false);
+      //   }, 1000);
 
-        setMN("");
-        setMC("");
-        setAD("");
-        setMP(null);
-        setDP(null);
-        setSQ("");
-        dataName.current.style.display = "none";
-        showPhoto.current.style.display = "none";
-        formRef.current.reset();
-      } else if (error) {
-        const details = error?.details[0].message;
-        setTimeout(() => {
-          loader.current.style.display = "none";
-          setLoading(false);
-        }, 1000);
-        handleError(details);
-      } else if (!success) {
-        handleError(message);
-        setTimeout(() => {
-          loader.current.style.display = "none";
-          setLoading(false);
-        }, 1000);
-      }
+      //   setMN("");
+      //   setMC("");
+      //   setAD("");
+      //   setMP(null);
+      //   setDP(null);
+      //   setSQ("");
+      //   dataName.current.style.display = "none";
+      //   showPhoto.current.style.display = "none";
+      //   formRef.current.reset();
+      // } else if (error) {
+      //   const details = error?.details[0].message;
+      //   setTimeout(() => {
+      //     loader.current.style.display = "none";
+      //     setLoading(false);
+      //   }, 1000);
+      //   handleError(details);
+      // } else if (!success) {
+      //   handleError(message);
+      //   setTimeout(() => {
+      //     loader.current.style.display = "none";
+      //     setLoading(false);
+      //   }, 1000);
+      // }
     } catch (error) {
       handleError(error);
       setTimeout(() => {
