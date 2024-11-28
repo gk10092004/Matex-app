@@ -253,6 +253,7 @@ const VendorMaterial = () => {
 
       loader.current.style.display = "flex";
       setLoading(true);
+      if(ownerId) return console.log(ownerId,matImage)
 
       const url = "https://matexbackend.vercel.app/api/vendors/history";
       const response = await fetch(url, {
