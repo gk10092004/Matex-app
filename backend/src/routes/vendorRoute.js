@@ -19,9 +19,9 @@ router.post(
       { name: "material_photo", maxCount: 1 },
       { name: "datasheet_pdf", maxCount: 1 },
     ]), // First validation middleware
-    handleCleanUpTempFiles,
-    MaterialParse,
-    handleVendorHistoryValidation,
+    // handleCleanUpTempFiles,
+    // MaterialParse,
+    // handleVendorHistoryValidation,
     handleVendorLikedPart // Final controller
   );
   router.post(

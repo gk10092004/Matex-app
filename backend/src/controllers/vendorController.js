@@ -111,7 +111,7 @@ const handleVendorLikedPart = async(req,res) => {
         res.status(201).json({ message: "Material added successfully", success:true });
     } catch (err) {
         console.error(err);
-        res.status(500).json({message:"Internal  Serverfghdfghd Error",success:false});
+        res.status(500).json({message:"Internal  Server Error",success:false});
     }
 }
 
