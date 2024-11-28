@@ -253,7 +253,8 @@ const VendorMaterial = () => {
       
       // loader.current.style.display = "flex";
       // setLoading(true);
-      if(ownerId) return console.log(ownerId,matImage);
+      const demo = true;
+      if(demo) return console.log("demo",demo,matImage);
       else return console.log("something is error here")
       
 
