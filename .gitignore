@@ -4,6 +4,7 @@ node_modules/
 # Frontend build output
 frontend/dist/
 frontend/build/
+frontend/.vite
 
 # Backend environment files
 backend/.env
