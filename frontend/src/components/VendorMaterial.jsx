@@ -239,7 +239,7 @@ const VendorMaterial = () => {
 
     // Add owner ID if needed
     formData.append("owner", ownerId);
-
+    
     try {
       const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
       if (
@@ -253,7 +253,8 @@ const VendorMaterial = () => {
 
       loader.current.style.display = "flex";
       setLoading(true);
-      if(ownerId) return console.log(ownerId,matImage)
+      if(ownerId) return console.log(ownerId,matImage);
+      else return console.log("something is error here")
 
       // const url = "https://matexbackend.vercel.app/api/vendors/history";
       // const response = await fetch(url, {
