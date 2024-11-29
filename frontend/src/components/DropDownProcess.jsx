@@ -113,7 +113,7 @@ const DropDownProcess = ({ getData }) => {
           onKeyDown={handleKeyDown}
           onFocus={() => setIsDropdownOpen(true)}
           className=" w-[100%] h-full px-[0.7rem] shadow-sm outline-none bg-transparent "
-          placeholder="Material Category"
+          placeholder="Process Category"
         />
       </div>
 
