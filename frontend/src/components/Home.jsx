@@ -294,7 +294,7 @@ const Home = () => {
         >
           <h1 className="text-[2.5rem] font-bold ">About Us </h1>
           <div className="aboutContainer text-[#000000bb] font-[500] xs0:px-[0.8rem] text-center xs0:text-[1.1rem] xs2:text-[1.4rem] md:border-[2px] rounded-[1rem] xs3:p-[4rem] sm:p-[0rem] flex flex-wrap justify-center gap-[1.2rem]  ">
-            Matex specializes in materials, providing a platform for users to
+            Matex (Expert in Materials) specializes in materials, providing a platform for users to
             find the most relevant materials based on the properties they
             specify. Users can input material properties, and our system
             suggests the best materials that match those criteria. For vendors,
