@@ -221,7 +221,7 @@ const Home = () => {
             />
             <div className="px-[1rem] xs1:w-[80vw] xs3:w-[30rem] flex flex-col justify-center items-center gap-[0.5rem] ">
               <h1 className="text-[2rem] font-bold">Tig Welding</h1>
-              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] font-semibold text-center ">
+              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] text-[#000000bb] font-[500] text-center ">
                 TIG Welding (Tungsten Inert Gas Welding), or Gas Tungsten Arc
                 Welding (GTAW), uses a non-consumable tungsten electrode and an
                 inert gas, like argon, to shield the weld. Known for precision
@@ -239,7 +239,7 @@ const Home = () => {
             />
             <div className="px-[1rem] xs0:w-[80vw] xs3:w-[30rem] flex flex-col justify-center items-center gap-[0.5rem] xs3:order-1 ">
               <h1 className="text-[2rem] font-bold">Steel 1095</h1>
-              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] font-semibold text-center ">
+              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] text-[#000000bb] font-[500] text-center ">
                 Steel 1095 is a high-carbon steel with approximately 0.95%
                 carbon content. Known for its hardness and strength, it is
                 commonly used in making knives, blades, and cutting tools. It
@@ -257,7 +257,7 @@ const Home = () => {
             />
             <div className="px-[1rem] xs1:w-[80vw] xs3:w-[30rem] flex flex-col justify-center items-center gap-[0.5rem] ">
               <h1 className="text-[2rem] font-bold">Forging Process</h1>
-              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] font-semibold text-center ">
+              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] text-[#000000bb] font-[500] text-center ">
                 Forging is a manufacturing process where metal is shaped by
                 compressive forces using tools like hammers, presses, or dies.
                 It can be performed hot or cold, improving the materials
@@ -276,7 +276,7 @@ const Home = () => {
             />
             <div className="px-[1rem] xs0:w-[80vw] xs3:w-[30rem] flex flex-col justify-center items-center gap-[0.5rem] xs3:order-1 ">
               <h1 className="text-[2rem] font-bold">Copper C10100</h1>
-              <p className="xs0:text-[1.1rem] xs2:text-[1.3rem] font-semibold text-center ">
+              <p className="xs0:text-[1.1rem] text-[#000000bb] font-[500] xs2:text-[1.3rem]  text-center ">
                 Copper C10100, also known as oxygen-free copper (OFC), is highly
                 regarded for its exceptional electrical conductivity and
                 resistance to corrosion. It contains very low oxygen content,
@@ -293,7 +293,7 @@ const Home = () => {
           className="about  md:px-[10rem] md:py-[3rem] md:my-[2rem] py-[1rem]  flex flex-col gap-[2rem] justify-center items-center "
         >
           <h1 className="text-[2.5rem] font-bold ">About Us </h1>
-          <div className="aboutContainer font-semibold xs0:px-[0.8rem] text-center xs0:text-[1.1rem] xs2:text-[1.4rem] md:border-[2px] rounded-[1rem] xs3:p-[4rem] sm:p-[0rem] flex flex-wrap justify-center gap-[1.2rem]  ">
+          <div className="aboutContainer text-[#000000bb] font-[500] xs0:px-[0.8rem] text-center xs0:text-[1.1rem] xs2:text-[1.4rem] md:border-[2px] rounded-[1rem] xs3:p-[4rem] sm:p-[0rem] flex flex-wrap justify-center gap-[1.2rem]  ">
             Matex specializes in materials, providing a platform for users to
             find the most relevant materials based on the properties they
             specify. Users can input material properties, and our system
