@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json()); //getting data in form of json
 
-app.use(cors());
+// app.use(cors());
 app.use(express.json({ limit: '500mb' })); // Set JSON payload size limit
 app.use(bodyParser.urlencoded({ limit: '500mb', extended: true })); // S
 
