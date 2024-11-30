@@ -38,6 +38,7 @@ const MaterialDetail = () => {
   const down = useRef(null);
 
   const Close = () => {
+    console.log(single);
     down.current.style.display = "block";
     up.current.style.display = "none";
   };
@@ -198,6 +199,31 @@ const MaterialDetail = () => {
                     {single.basic_detail.addtional_detail}
                   </span>
                 </div>
+                {
+                  single.process_name.length? (
+                    <div className="name flex items-center gap-[1rem] ">
+                      <span className="text-[1.3rem]  xs0:min-w-[15ch] xs3:w-[15rem] font-semibold text-[#747474] self-start ">
+                        Possible Process:
+                      </span>
+                      <div className="flex gap-[0.3rem] flex-wrap " >
+                        {
+                          single.process_name.map((item)=>{
+                            return(
+                              <>
+                              <span className="text-[1.3rem] border border-[#a9a9a9] px-[0.4rem] py-[0.1rem] rounded-[0.3rem] font-semibold text-[#747474]" >
+                                {item}
+                              </span>
+                              </>
+                            )
+                          })
+                        }
+                      </div>
+                      {/* <span className="text-[1.3rem] w-[60ch] font-semibold text-[#747474]">
+                        {single.basic_detail.addtional_detail}
+                      </span> */}
+                  </div>
+                  ): ""
+                }
               </div>
               <img
                 src={single.material_photo}
