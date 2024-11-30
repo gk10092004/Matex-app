@@ -26,7 +26,7 @@ const VendorMaterial = () => {
     setCountry(localStorage.getItem("country"));
   }, []);
   const Units = [
-    { label: "Kg(Kelogram)" },
+    { label: "Kg(Kilogram)" },
     { label: "M(Meter)" },
     { label: "2M*1M*20CM" },
   ];
@@ -512,7 +512,7 @@ const VendorMaterial = () => {
                   <div className="addition_detail flex flex-col gap-[0.3rem] flex-grow  ">
                     <div className="font-semibold">Lead Time</div>
                     <input
-                      type="number"
+                      type="text"
                       required
                       onChange={(e) => setSL(e.target.value)}
                       className="h-[3.5rem] w-[100%] text-[1.2rem] font-semibold text-[#969494] px-[0.7rem] bg-transparent border-[#6F7979] border-[0.15rem] outline-none rounded-[0.5rem] "
