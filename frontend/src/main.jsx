@@ -4,6 +4,7 @@ import App from './App.jsx'
 import Registation from './components/Registation.jsx'
 import Login from './components/Login.jsx'
 import PassForget from './components/PassForget.jsx'
+import Admin from './components/Admin.jsx'
 import UserHome from './components/UserHome.jsx'
 import WrongUrl from './components/WrongUrl.jsx'
 import VendorRegistation from './components/VendorRegistation.jsx'
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
   {
     path:"/demo",
     element:<DropDown/>
+  },
+  {
+    path:"/admin",
+    element:<Admin/>
   },
   {
     path:"*",

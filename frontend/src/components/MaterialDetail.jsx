@@ -205,7 +205,7 @@ const MaterialDetail = () => {
                       <span className="text-[1.3rem]  xs0:min-w-[15ch] xs3:w-[15rem] font-semibold text-[#747474] self-start ">
                         Possible Process:
                       </span>
-                      <div className="flex gap-[0.3rem] flex-wrap " >
+                      <div className="flex gap-[0.3rem] flex-wrap pr-[1rem] flex-grow " >
                         {
                           single.process_name.map((item)=>{
                             return(
