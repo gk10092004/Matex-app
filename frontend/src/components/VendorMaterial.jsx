@@ -377,7 +377,7 @@ const VendorMaterial = () => {
                       cloud_upload
                     </span>
                     <h1 className="font-bold text-[1.8rem] ">Drag and Drop</h1>
-                    <p>(PDF File)</p>
+                    <p>(JPEG File)</p>
                     <h2>or</h2>
                     <input
                       type="file"
