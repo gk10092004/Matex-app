@@ -28,7 +28,7 @@ const VendorMaterial = () => {
   const Units = [
     { label: "Kg(Kelogram)" },
     { label: "M(Meter)" },
-    { label: "4Meter*4Meter" },
+    { label: "2M*1M*20CM" },
   ];
   const Currency = [
     { label: "USD (United States Dollar)" },
@@ -55,7 +55,7 @@ const VendorMaterial = () => {
       { label: "Foil" },
       { label: "Tube" },
       { label: "Angle" },
-      { label: "Blank" },
+      { label: "Block" },
     ],
   };
 
