@@ -11,29 +11,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.use(express.json()); //getting data in form of json
 
-// app.use(cors({ origin: 'https://matexiitr.vercel.app' }));
-
-// const cors = require('cors');
-
-app.use(cors({
-  origin: (origin, callback) => {
-    const allowedOrigins = ['http://localhost:5173', 'https://matexiitr.vercel.app'];
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
-app.options('*', cors()); // Handle preflight requests
-
-
-
-
-
+app.use(cors({ origin: 'https://matexiitr.vercel.app' }));
 app.use(express.json({ limit: '500mb' })); // Set JSON payload size limit
 app.use(bodyParser.urlencoded({ limit: '500mb', extended: true })); // S
 
