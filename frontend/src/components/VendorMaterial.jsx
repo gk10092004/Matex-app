@@ -591,14 +591,14 @@ const VendorMaterial = () => {
         <div className="flex gap-[0.7rem] ">
           <button
             type="submit"
-            className="bg-[#006A6A] flex flex-grow gap-[1rem]  text-[#ffffff] justify-center font-semibold items-center border-[0.15rem] border-[#006A6A] rounded-[2rem] px-[1.5rem] py-[0.6rem]"
+            className="bg-[#006A6A] flex-1 flex flex-grow gap-[1rem]  text-[#ffffff] justify-center font-semibold items-center border-[0.15rem] border-[#006A6A] rounded-[2rem] px-[1.5rem] py-[0.6rem]"
           >
             Add Material
           </button>
           <button
             onClick={ResetForm}
             type="reset"
-            className="flex flex-grow gap-[1rem] text-[#3F4948] justify-center font-semibold items-center border-[0.15rem] border-[#3F4948] rounded-[2rem] px-[1.5rem] py-[0.6rem]"
+            className="flex-1 flex flex-grow gap-[1rem] text-[#3F4948] justify-center font-semibold items-center border-[0.15rem] border-[#3F4948] rounded-[2rem] px-[1.5rem] py-[0.6rem]"
           >
             Reset
           </button>
