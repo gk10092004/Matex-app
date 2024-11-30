@@ -118,6 +118,7 @@ const VendorMaterial = () => {
       setMP(file);
       previewFiles(file, name);
       showPhoto.current.style.display = "flex";
+      // console.log(file)
     } else if (name === "datasheet_pdf") {
       setDP(file);
       previewFiles(file, name);
